@@ -1,28 +1,28 @@
 import React from 'react';
 import {stylesheet} from 'react-native';
 import {
-    SafeAreaView,
     StyleSheet,
-    Pressable,
     View,
-    Text,
-    ScrollView,
     TextInput,
     Button
   } from 'react-native';
 
-function ToDoForm(){
+function ToDoForm({onAdd}){
+    const [taskText, setTaskText] = React.useState('');
+
     return(
         <>
         <View style={styles.form}>
         <TextInput
           style={styles.input}
           placeholder="Add a new task..."
+          onChangeText={(text) => setTaskText(text)}
+          value={text}
         />
-        <Button title="Add" />
+        <Button title="Add" onPress={() => addTask(taskText)}/>
       </View>
         </>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
