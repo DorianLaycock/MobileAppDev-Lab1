@@ -1,8 +1,8 @@
 import React from 'react';
 import {useState} from 'react-native';
 import { SafeAreaView, Button } from 'react-native';
-import ToDoList from '../ToDoList';
-import ToDoForm from '../ToDoForm';
+import ToDoList from '../../Components/ToDoList';
+import ToDoForm from '../../Components/ToDoForm';
 
 function Home({navigation}) {
 
